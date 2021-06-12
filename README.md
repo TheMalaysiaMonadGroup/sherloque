@@ -48,7 +48,8 @@ GROUP BY person.id;
 ```json
 {
   "language": "typescript",
-  "output": "./sdk.ts"
+  "output": "./sdk.ts",
+  "database": "mysql"
 }
 ```
 4. Result  (generated SDK)
