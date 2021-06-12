@@ -20,29 +20,29 @@ You just need to provide 3 kind of files:
 ## Example
 1. Database Schema
 ```sql
-create table person (
-  id    int           not null,
-  name  varchar(255)  not null,
-  primary key (id)
+CREATE TABLE person (
+  id    INT           NOT NULL,
+  name  VARCHAR(255)  NOT NULL,
+  PRIMARY KEY (id)
 );
 
-create table pet (
-  id        int           not null,
-  owner_id  int           not null,
-  kind      varchar(255)  not null,
-  primary key (id),
-  foreign key (owner_id) references person(id)
+CREATE TABLE pet (
+  id        INT           NOT NULL,
+  owner_id  INT           NOT NULL,
+  kind      VARCHAR(255)  NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (owner_id) REFERENCES person(id)
 );
 ```
 2. Database Operation
 (Note that variables are prefixed with `$`)
 ```sql
 -- The name of this file: getUserPetsCount.sql
-select person.name, count(*) 
-from person inner join pet 
-  on person.id = pet.owner_id
-where pet.kind = $petKind
-group by person.id;
+SELECT person.name, count(*) 
+FROM person INNER JOIN pet 
+  ON person.id = pet.owner_id
+WHERE pet.kind = $petKind
+GROUP BY person.id;
 ```
 3. Sherloque config
 ```json
