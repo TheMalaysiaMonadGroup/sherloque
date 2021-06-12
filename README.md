@@ -48,6 +48,8 @@ GROUP BY person.id;
 ```json
 {
   "language": "typescript",
+  "schemas": "./schema/**/*.sql",
+  "operations": "./src/**/*.sql",
   "output": "./sdk.ts",
   "database": "mysql"
 }
