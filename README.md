@@ -35,7 +35,7 @@ create table pet (
 );
 ```
 2. Database Operation
-Note that variables are prefixed with `$`
+(Note that variables are prefixed with `$`)
 ```sql
 -- The name of this file: getUserPetsCount.sql
 select person.name, count(*) 
