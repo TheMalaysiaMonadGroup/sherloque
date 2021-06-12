@@ -30,7 +30,7 @@ create table pet (
   id        int           not null,
   owner_id  int           not null,
   kind      varchar(255)  not null,
-  primary key (int),
+  primary key (id),
   foreign key (owner_id) references person(id)
 );
 ```
