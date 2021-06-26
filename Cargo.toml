@@ -10,3 +10,4 @@ license = "MIT OR Apache-2.0"
 
 [dependencies]
 sqlparser = "0.9.0"
+mysql = "20.1.0"
